@@ -9,7 +9,7 @@ const App = () => {
   const [memory, setMemory] = useState(0);
 
   const setDisplayLimit = (value) => {
-    if (value.length <= 10) {
+    if (value.length <= 8) {
       setDisplay(value);
     } else {
       setDisplay(parseFloat(value).toExponential(4));
