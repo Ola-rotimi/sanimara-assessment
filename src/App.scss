@@ -1,0 +1,67 @@
+.App {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #FF6AC2;
+
+    .calculator {
+        border-radius: 20px;
+        height: 60%;
+
+        .display {
+            display: grid;
+            justify-content: right;
+            padding-right: 10px;
+            position: relative;
+            height: 40%;
+            background-color: #FDF0F0;
+            border-radius: 20px 20px 0 0;
+            color: #4F4557;
+            text-wrap: wrap;
+
+            p {
+                position: absolute;
+                bottom: 50px;
+                right: 10px;
+            }
+
+            h1 {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px;
+            justify-content: space-evenly;
+            background-color: #4F4557;
+            border-radius: 0 0 20px 20px;
+            height: 60%;
+
+            button {
+                border: none;
+                background-color: transparent;
+                color: #FDF0F0;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+
+            .operator-button,
+            .backspace-button,
+            .memory-button {
+                color: #FFCD4B;
+            }
+
+            .equal-button {
+                background-color: #FFCD4B;
+                color: #4F4557;
+                grid-column: 3 / span 2;
+                border-radius: 0 0 20px 0;
+            }
+        }
+    }
+}
